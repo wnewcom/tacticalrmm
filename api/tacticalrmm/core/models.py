@@ -114,6 +114,12 @@ class CoreSettings(BaseAuditModel):
 
     block_local_user_logon = models.BooleanField(default=False)
     sso_enabled = models.BooleanField(default=False)
+    ticket_status_options = ArrayField(
+        models.CharField(max_length=50, blank=True), blank=True, default=list
+    )
+    ticket_priority_options = ArrayField(
+        models.CharField(max_length=50, blank=True), blank=True, default=list
+    )
 
     def save(self, *args, **kwargs) -> None:
         from alerts.tasks import cache_agents_alert_template
