@@ -232,6 +232,7 @@ INSTALLED_APPS = [
     "logs",
     "scripts",
     "alerts",
+    "tickets",
     "ee.reporting",
     "ee.sso",
 ]
