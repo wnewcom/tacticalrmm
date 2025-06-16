@@ -41,6 +41,7 @@ urlpatterns = [
     path("logs/", include("logs.urls")),
     path("scripts/", include("scripts.urls")),
     path("alerts/", include("alerts.urls")),
+    path("tickets/", include("tickets.urls")),
     path("accounts/", include("accounts.urls")),
     path("reporting/", include("ee.reporting.urls")),
 ]
